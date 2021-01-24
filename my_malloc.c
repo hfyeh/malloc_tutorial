@@ -4,6 +4,15 @@
 #include "my_malloc.h"
 #include <stdio.h>
 
+typedef struct block *block_ptr;
+
+struct block {
+    size_t size;
+    block_ptr next;
+    int free;
+};
+
+
 void *my_malloc_v1(size_t size) {
     void *p;
 
