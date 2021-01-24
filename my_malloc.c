@@ -13,6 +13,9 @@ struct block {
 };
 
 
+#define align4(x) ((((x - 1) >> 2) << 2) + 4)
+
+
 void *my_malloc_v1(size_t size) {
     void *p;
 
